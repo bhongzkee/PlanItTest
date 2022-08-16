@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on darwin)" generated="20220816 20:56:02.175" rpa="false" schemaversion="3">
+<suite id="s1" name="PlanItTest" source="/Users/herminiodelacruz/PlanItTest">
+<suite id="s1-s1" name="Suite" source="/Users/herminiodelacruz/PlanItTest/suite">
+<suite id="s1-s1-s1" name="PlanitTechnicalAssessment" source="/Users/herminiodelacruz/PlanItTest/suite/PlanitTechnicalAssessment.robot">
+<test id="s1-s1-s1-t1" name="Test Case 1" line="11">
+<kw name="User Navigates To URL" library="common_keywords">
+<arg>${BASE_URL}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220816 20:56:02.267" level="INFO">Opening browser 'chrome' to base url 'http://jupiter.cloud.planittesting.com'.</msg>
+<status status="PASS" starttime="20220816 20:56:02.267" endtime="20220816 20:56:10.044"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${p_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220816 20:56:10.045" level="INFO">Opening url 'http://jupiter.cloud.planittesting.com'</msg>
+<status status="PASS" starttime="20220816 20:56:10.044" endtime="20220816 20:56:10.244"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.25 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220816 20:56:10.244" endtime="20220816 20:56:10.244"/>
+</kw>
+<status status="PASS" starttime="20220816 20:56:02.267" endtime="20220816 20:56:10.244"/>
+</kw>
+<kw name="User Clicks On Nav Header Text Link" library="common_keywords">
+<arg>Contact</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${t_locator}</var>
+<arg>//div[contains(@class, "navbar")]//a[contains(text(), "${p_text}")]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220816 20:56:10.244" level="INFO">${t_locator} = //div[contains(@class, "navbar")]//a[contains(text(), "Contact")]</msg>
+<status status="PASS" starttime="20220816 20:56:10.244" endtime="20220816 20:56:10.245"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220816 20:56:10.245" endtime="20220816 20:56:10.881"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220816 20:56:10.883" level="INFO">Clicking element '//div[contains(@class, "navbar")]//a[contains(text(), "Contact")]'.</msg>
+<status status="PASS" starttime="20220816 20:56:10.882" endtime="20220816 20:56:11.579"/>
+</kw>
+<status status="PASS" starttime="20220816 20:56:10.244" endtime="20220816 20:56:11.579"/>
+</kw>
+<kw name="User Clicks On Button" library="common_keywords">
+<arg>Submit</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${t_locator}</var>
+<arg>//*[contains(@class,"btn")][contains(text(), "${p_button}")]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220816 20:56:11.580" level="INFO">${t_locator} = //*[contains(@class,"btn")][contains(text(), "Submit")]</msg>
+<status status="PASS" starttime="20220816 20:56:11.580" endtime="20220816 20:56:11.580"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220816 20:56:11.580" endtime="20220816 20:56:12.145"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220816 20:56:12.147" level="INFO">Clicking element '//*[contains(@class,"btn")][contains(text(), "Submit")]'.</msg>
+<status status="PASS" starttime="20220816 20:56:12.145" endtime="20220816 20:56:13.040"/>
+</kw>
+<status status="PASS" starttime="20220816 20:56:11.580" endtime="20220816 20:56:13.040"/>
+</kw>
+<kw name="Field Error Message Should Be Visible" library="common_keywords">
+<arg>Forename</arg>
+<arg>Forename is required</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${t_locator}</var>
+<arg>//div[label[contains(text(), "${p_fieldName}")]]//*[contains(text(), "${p_errorMessage}")]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220816 20:56:13.041" level="INFO">${t_locator} = //div[label[contains(text(), "Forename")]]//*[contains(text(), "Forename is required")]</msg>
+<status status="PASS" starttime="20220816 20:56:13.041" endtime="20220816 20:56:13.041"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220816 20:56:13.041" endtime="20220816 20:56:13.589"/>
+</kw>
+<status status="PASS" starttime="20220816 20:56:13.040" endtime="20220816 20:56:13.590"/>
+</kw>
+<kw name="Field Error Message Should Be Visible" library="common_keywords">
+<arg>Email</arg>
+<arg>Email is required</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${t_locator}</var>
+<arg>//div[label[contains(text(), "${p_fieldName}")]]//*[contains(text(), "${p_errorMessage}")]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220816 20:56:13.594" level="INFO">${t_locator} = //div[label[contains(text(), "Email")]]//*[contains(text(), "Email is required")]</msg>
+<status status="PASS" starttime="20220816 20:56:13.591" endtime="20220816 20:56:13.594"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220816 20:56:13.595" endtime="20220816 20:56:14.147"/>
+</kw>
+<status status="PASS" starttime="20220816 20:56:13.590" endtime="20220816 20:56:14.148"/>
+</kw>
+<kw name="Field Error Message Should Be Visible" library="common_keywords">
+<arg>Message</arg>
+<arg>Message is required</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${t_locator}</var>
+<arg>//div[label[contains(text(), "${p_fieldName}")]]//*[contains(text(), "${p_errorMessage}")]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220816 20:56:14.150" level="INFO">${t_locator} = //div[label[contains(text(), "Message")]]//*[contains(text(), "Message is required")]</msg>
+<status status="PASS" starttime="20220816 20:56:14.150" endtime="20220816 20:56:14.150"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220816 20:56:14.151" endtime="20220816 20:56:14.708"/>
+</kw>
+<status status="PASS" starttime="20220816 20:56:14.149" endtime="20220816 20:56:14.709"/>
+</kw>
+<kw name="User Inputs Text On Field" library="common_keywords">
+<arg>Forename</arg>
+<arg>test name</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${t_locator}</var>
+<arg>//div[label[contains(text(), "${p_fieldName}")]]//input | //div[label[contains(text(), "${p_fieldName}")]]//textarea</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220816 20:56:14.711" level="INFO">${t_locator} = //div[label[contains(text(), "Forename")]]//input | //div[label[contains(text(), "Forename")]]//textarea</msg>
+<status status="PASS" starttime="20220816 20:56:14.710" endtime="20220816 20:56:14.711"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220816 20:56:14.711" endtime="20220816 20:56:15.262"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>${p_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220816 20:56:15.269" level="INFO">Typing text 'test name' into text field '//div[label[contains(text(), "Forename")]]//input | //div[label[contains(text(), "Forename")]]//textarea'.</msg>
+<status status="PASS" starttime="20220816 20:56:15.262" endtime="20220816 20:56:16.326"/>
+</kw>
+<status status="PASS" starttime="20220816 20:56:14.709" endtime="20220816 20:56:16.326"/>
+</kw>
+<kw name="Field Error Message Should Not Be Visible" library="common_keywords">
+<arg>Forename</arg>
+<arg>Forename is required</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${t_locator}</var>
+<arg>//div[label[contains(text(), "${p_fieldName}")]]//*[contains(text(), "${p_errorMessage}")]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220816 20:56:16.327" level="INFO">${t_locator} = //div[label[contains(text(), "Forename")]]//*[contains(text(), "Forename is required")]</msg>
+<status status="PASS" starttime="20220816 20:56:16.326" endtime="20220816 20:56:16.327"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220816 20:56:16.327" endtime="20220816 20:56:16.592"/>
+</kw>
+<status status="PASS" starttime="20220816 20:56:16.326" endtime="20220816 20:56:16.592"/>
+</kw>
+<kw name="User Inputs Text On Field" library="common_keywords">
+<arg>Email</arg>
+<arg>testemail@mail.com</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${t_locator}</var>
+<arg>//div[label[contains(text(), "${p_fieldName}")]]//input | //div[label[contains(text(), "${p_fieldName}")]]//textarea</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220816 20:56:16.594" level="INFO">${t_locator} = //div[label[contains(text(), "Email")]]//input | //div[label[contains(text(), "Email")]]//textarea</msg>
+<status status="PASS" starttime="20220816 20:56:16.593" endtime="20220816 20:56:16.594"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220816 20:56:16.594" endtime="20220816 20:56:17.143"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>${p_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220816 20:56:17.145" level="INFO">Typing text 'testemail@mail.com' into text field '//div[label[contains(text(), "Email")]]//input | //div[label[contains(text(), "Email")]]//textarea'.</msg>
+<status status="PASS" starttime="20220816 20:56:17.144" endtime="20220816 20:56:18.076"/>
+</kw>
+<status status="PASS" starttime="20220816 20:56:16.593" endtime="20220816 20:56:18.076"/>
+</kw>
+<kw name="Field Error Message Should Not Be Visible" library="common_keywords">
+<arg>Email</arg>
+<arg>Email is required</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${t_locator}</var>
+<arg>//div[label[contains(text(), "${p_fieldName}")]]//*[contains(text(), "${p_errorMessage}")]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220816 20:56:18.077" level="INFO">${t_locator} = //div[label[contains(text(), "Email")]]//*[contains(text(), "Email is required")]</msg>
+<status status="PASS" starttime="20220816 20:56:18.077" endtime="20220816 20:56:18.077"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220816 20:56:18.077" endtime="20220816 20:56:18.341"/>
+</kw>
+<status status="PASS" starttime="20220816 20:56:18.076" endtime="20220816 20:56:18.341"/>
+</kw>
+<kw name="User Inputs Text On Field" library="common_keywords">
+<arg>Message</arg>
+<arg>test mesaage</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${t_locator}</var>
+<arg>//div[label[contains(text(), "${p_fieldName}")]]//input | //div[label[contains(text(), "${p_fieldName}")]]//textarea</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220816 20:56:18.343" level="INFO">${t_locator} = //div[label[contains(text(), "Message")]]//input | //div[label[contains(text(), "Message")]]//textarea</msg>
+<status status="PASS" starttime="20220816 20:56:18.342" endtime="20220816 20:56:18.343"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220816 20:56:18.343" endtime="20220816 20:56:18.889"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>${p_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220816 20:56:18.889" level="INFO">Typing text 'test mesaage' into text field '//div[label[contains(text(), "Message")]]//input | //div[label[contains(text(), "Message")]]//textarea'.</msg>
+<status status="PASS" starttime="20220816 20:56:18.889" endtime="20220816 20:56:19.774"/>
+</kw>
+<status status="PASS" starttime="20220816 20:56:18.342" endtime="20220816 20:56:19.774"/>
+</kw>
+<kw name="Field Error Message Should Not Be Visible" library="common_keywords">
+<arg>Message</arg>
+<arg>Message is required</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${t_locator}</var>
+<arg>//div[label[contains(text(), "${p_fieldName}")]]//*[contains(text(), "${p_errorMessage}")]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220816 20:56:19.775" level="INFO">${t_locator} = //div[label[contains(text(), "Message")]]//*[contains(text(), "Message is required")]</msg>
+<status status="PASS" starttime="20220816 20:56:19.775" endtime="20220816 20:56:19.775"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220816 20:56:19.775" endtime="20220816 20:56:20.040"/>
+</kw>
+<status status="PASS" starttime="20220816 20:56:19.774" endtime="20220816 20:56:20.040"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220816 20:56:20.041" endtime="20220816 20:56:20.458"/>
+</kw>
+<tag>ASSESSMENT</tag>
+<status status="PASS" starttime="20220816 20:56:02.266" endtime="20220816 20:56:20.459"/>
+</test>
+<test id="s1-s1-s1-t2" name="Test Case 2" line="27">
+<kw name="User Navigates To URL" library="common_keywords">
+<arg>${BASE_URL}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220816 20:56:20.461" level="INFO">Opening browser 'chrome' to base url 'http://jupiter.cloud.planittesting.com'.</msg>
+<status status="PASS" starttime="20220816 20:56:20.460" endtime="20220816 20:56:24.785"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${p_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220816 20:56:24.786" level="INFO">Opening url 'http://jupiter.cloud.planittesting.com'</msg>
+<status status="PASS" starttime="20220816 20:56:24.786" endtime="20220816 20:56:25.294"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.25 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220816 20:56:25.295" endtime="20220816 20:56:25.295"/>
+</kw>
+<status status="PASS" starttime="20220816 20:56:20.460" endtime="20220816 20:56:25.295"/>
+</kw>
+<kw name="User Clicks On Nav Header Text Link" library="common_keywords">
+<arg>Contact</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${t_locator}</var>
+<arg>//div[contains(@class, "navbar")]//a[contains(text(), "${p_text}")]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220816 20:56:25.298" level="INFO">${t_locator} = //div[contains(@class, "navbar")]//a[contains(text(), "Contact")]</msg>
+<status status="PASS" starttime="20220816 20:56:25.297" endtime="20220816 20:56:25.298"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220816 20:56:25.298" endtime="20220816 20:56:25.965"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220816 20:56:25.967" level="INFO">Clicking element '//div[contains(@class, "navbar")]//a[contains(text(), "Contact")]'.</msg>
+<status status="PASS" starttime="20220816 20:56:25.966" endtime="20220816 20:56:26.641"/>
+</kw>
+<status status="PASS" starttime="20220816 20:56:25.296" endtime="20220816 20:56:26.641"/>
+</kw>
+<kw name="User Inputs Text On Field" library="common_keywords">
+<arg>Forename</arg>
+<arg>Bhong</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${t_locator}</var>
+<arg>//div[label[contains(text(), "${p_fieldName}")]]//input | //div[label[contains(text(), "${p_fieldName}")]]//textarea</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220816 20:56:26.641" level="INFO">${t_locator} = //div[label[contains(text(), "Forename")]]//input | //div[label[contains(text(), "Forename")]]//textarea</msg>
+<status status="PASS" starttime="20220816 20:56:26.641" endtime="20220816 20:56:26.641"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220816 20:56:26.641" endtime="20220816 20:56:27.210"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>${p_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220816 20:56:27.212" level="INFO">Typing text 'Bhong' into text field '//div[label[contains(text(), "Forename")]]//input | //div[label[contains(text(), "Forename")]]//textarea'.</msg>
+<status status="PASS" starttime="20220816 20:56:27.211" endtime="20220816 20:56:28.386"/>
+</kw>
+<status status="PASS" starttime="20220816 20:56:26.641" endtime="20220816 20:56:28.387"/>
+</kw>
+<kw name="User Inputs Text On Field" library="common_keywords">
+<arg>Surname</arg>
+<arg>Dela Cruz</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${t_locator}</var>
+<arg>//div[label[contains(text(), "${p_fieldName}")]]//input | //div[label[contains(text(), "${p_fieldName}")]]//textarea</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220816 20:56:28.388" level="INFO">${t_locator} = //div[label[contains(text(), "Surname")]]//input | //div[label[contains(text(), "Surname")]]//textarea</msg>
+<status status="PASS" starttime="20220816 20:56:28.388" endtime="20220816 20:56:28.388"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220816 20:56:28.389" endtime="20220816 20:56:28.948"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>${p_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220816 20:56:28.948" level="INFO">Typing text 'Dela Cruz' into text field '//div[label[contains(text(), "Surname")]]//input | //div[label[contains(text(), "Surname")]]//textarea'.</msg>
+<status status="PASS" starttime="20220816 20:56:28.948" endtime="20220816 20:56:29.831"/>
+</kw>
+<status status="PASS" starttime="20220816 20:56:28.387" endtime="20220816 20:56:29.831"/>
+</kw>
+<kw name="User Inputs Text On Field" library="common_keywords">
+<arg>Email</arg>
+<arg>testemail@mail.com</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${t_locator}</var>
+<arg>//div[label[contains(text(), "${p_fieldName}")]]//input | //div[label[contains(text(), "${p_fieldName}")]]//textarea</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220816 20:56:29.832" level="INFO">${t_locator} = //div[label[contains(text(), "Email")]]//input | //div[label[contains(text(), "Email")]]//textarea</msg>
+<status status="PASS" starttime="20220816 20:56:29.832" endtime="20220816 20:56:29.832"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220816 20:56:29.832" endtime="20220816 20:56:30.376"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>${p_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220816 20:56:30.378" level="INFO">Typing text 'testemail@mail.com' into text field '//div[label[contains(text(), "Email")]]//input | //div[label[contains(text(), "Email")]]//textarea'.</msg>
+<status status="PASS" starttime="20220816 20:56:30.377" endtime="20220816 20:56:31.287"/>
+</kw>
+<status status="PASS" starttime="20220816 20:56:29.831" endtime="20220816 20:56:31.287"/>
+</kw>
+<kw name="User Inputs Text On Field" library="common_keywords">
+<arg>Telephone</arg>
+<arg>1234567890</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${t_locator}</var>
+<arg>//div[label[contains(text(), "${p_fieldName}")]]//input | //div[label[contains(text(), "${p_fieldName}")]]//textarea</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220816 20:56:31.288" level="INFO">${t_locator} = //div[label[contains(text(), "Telephone")]]//input | //div[label[contains(text(), "Telephone")]]//textarea</msg>
+<status status="PASS" starttime="20220816 20:56:31.288" endtime="20220816 20:56:31.289"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220816 20:56:31.289" endtime="20220816 20:56:31.835"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>${p_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220816 20:56:31.838" level="INFO">Typing text '1234567890' into text field '//div[label[contains(text(), "Telephone")]]//input | //div[label[contains(text(), "Telephone")]]//textarea'.</msg>
+<status status="PASS" starttime="20220816 20:56:31.836" endtime="20220816 20:56:32.751"/>
+</kw>
+<status status="PASS" starttime="20220816 20:56:31.288" endtime="20220816 20:56:32.751"/>
+</kw>
+<kw name="User Inputs Text On Field" library="common_keywords">
+<arg>Message</arg>
+<arg>test mesaage</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${t_locator}</var>
+<arg>//div[label[contains(text(), "${p_fieldName}")]]//input | //div[label[contains(text(), "${p_fieldName}")]]//textarea</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220816 20:56:32.752" level="INFO">${t_locator} = //div[label[contains(text(), "Message")]]//input | //div[label[contains(text(), "Message")]]//textarea</msg>
+<status status="PASS" starttime="20220816 20:56:32.752" endtime="20220816 20:56:32.752"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220816 20:56:32.752" endtime="20220816 20:56:33.294"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>${p_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220816 20:56:33.295" level="INFO">Typing text 'test mesaage' into text field '//div[label[contains(text(), "Message")]]//input | //div[label[contains(text(), "Message")]]//textarea'.</msg>
+<status status="PASS" starttime="20220816 20:56:33.294" endtime="20220816 20:56:34.187"/>
+</kw>
+<status status="PASS" starttime="20220816 20:56:32.752" endtime="20220816 20:56:34.187"/>
+</kw>
+<kw name="User Clicks On Button" library="common_keywords">
+<arg>Submit</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${t_locator}</var>
+<arg>//*[contains(@class,"btn")][contains(text(), "${p_button}")]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220816 20:56:34.187" level="INFO">${t_locator} = //*[contains(@class,"btn")][contains(text(), "Submit")]</msg>
+<status status="PASS" starttime="20220816 20:56:34.187" endtime="20220816 20:56:34.187"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220816 20:56:34.188" endtime="20220816 20:56:34.722"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${t_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220816 20:56:34.724" level="INFO">Clicking element '//*[contains(@class,"btn")][contains(text(), "Submit")]'.</msg>
+<status status="PASS" starttime="20220816 20:56:34.723" endtime="20220816 20:56:35.448"/>
+</kw>
+<status status="PASS" starttime="20220816 20:56:34.187" endtime="20220816 20:56:35.448"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Thanks Bhong, we appreciate your feedback.</arg>
+<arg>30s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220816 20:56:35.450" endtime="20220816 20:56:40.870"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220816 20:56:40.870" endtime="20220816 20:56:42.187"/>
+</kw>
+<tag>ASSESSMENT</tag>
+<status status="PASS" starttime="20220816 20:56:20.459" endtime="20220816 20:56:42.187"/>
+</test>
+<doc>A test suite with a single test for valid login.
+
+This test has a workflow that is created using keywords in
+the imported resource file.</doc>
+<status status="PASS" starttime="20220816 20:56:02.184" endtime="20220816 20:56:42.189"/>
+</suite>
+<status status="PASS" starttime="20220816 20:56:02.183" endtime="20220816 20:56:42.192"/>
+</suite>
+<status status="PASS" starttime="20220816 20:56:02.175" endtime="20220816 20:56:42.193"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">ASSESSMENT</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="PlanItTest">PlanItTest</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Suite">PlanItTest.Suite</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1" name="PlanitTechnicalAssessment">PlanItTest.Suite.PlanitTechnicalAssessment</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

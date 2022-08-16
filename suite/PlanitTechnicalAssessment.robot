@@ -36,3 +36,13 @@ Test Case 2
     Wait Until Page Contains    Thanks Bhong, we appreciate your feedback.    30s
 
 
+Test Case 3
+    User Navigates To URL    ${BASE_URL}
+    User Clicks On Nav Header Text Link    Home
+    User Clicks On Button   Start Shopping
+    User Clicks On Item Buy Button    Funny Cow    2
+    User Clicks On Item Buy Button    Fluffy Bunny    1
+    User Clicks On Nav Header Text Link    Cart
+    The Item Quantity Should Be    Funny Cow    2
+    The Item Quantity Should Be    Fluffy Bunny    1
+

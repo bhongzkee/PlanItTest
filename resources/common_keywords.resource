@@ -32,6 +32,12 @@ User Clicks On Button
     Wait Until Element Is Visible    ${t_locator}    10s
     Click Element    ${t_locator}    
 
+User Clicks On Item Buy Button
+    [Arguments]    ${p_itemName}   ${p_times}=1
+    ${t_locator} =    Set Variable   //div[h4[contains(text(), "${p_itemName}")]]//a[contains(text(), "Buy")]
+    Wait Until Element Is Visible    ${t_locator}    10s
+    Repeat Keyword	${p_times}    Click Element    ${t_locator}    
+
 Field Error Message Should Be Visible
     [Arguments]    ${p_fieldName}    ${p_errorMessage}
     ${t_locator} =    Set Variable   //div[label[contains(text(), "${p_fieldName}")]]//*[contains(text(), "${p_errorMessage}")]
@@ -41,3 +47,9 @@ Field Error Message Should Not Be Visible
     [Arguments]    ${p_fieldName}    ${p_errorMessage}
     ${t_locator} =    Set Variable   //div[label[contains(text(), "${p_fieldName}")]]//*[contains(text(), "${p_errorMessage}")]
     Wait Until Element Is Not Visible    ${t_locator}    10s
+
+The Item Quantity Should Be
+    [Arguments]    ${p_itemName}    ${p_quantity}
+    ${t_locator} =    Set Variable   //tr[contains(string(), "${p_itemName}")]//input[@value=${p_quantity}]
+    Wait Until Element Is Visible    ${t_locator}    10s
+

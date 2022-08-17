@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     A test suite with a single test for valid login.
+Documentation     This is for variables.
 
 *** Variables ***
 ${BASE_URL}    http://jupiter.cloud.planittesting.com

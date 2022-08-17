@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     A test suite with a single test for valid login.
+Documentation     This is for user keywords.
 Library     SeleniumLibrary
 Library     OperatingSystem
 Library     Collections

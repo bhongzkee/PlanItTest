@@ -53,3 +53,26 @@ The Item Quantity Should Be
     ${t_locator} =    Set Variable   //tr[contains(string(), "${p_itemName}")]//input[@value=${p_quantity}]
     Wait Until Element Is Visible    ${t_locator}    10s
 
+Get Product Price
+    [Arguments]    ${p_itemName}
+
+    # get price column index
+    ${elementCount} =    Get Element Count    //thead/tr[contains(string(), "Price")]/th
+    FOR    ${i}    IN RANGE    ${elementCount}
+        ${index} =    Evaluate    ${i}+1
+        Log    ${index}
+        ${text} =    Get Text    //thead/tr[contains(string(), "Price")]/th[${index}]
+        Exit For Loop IF    "${text}" == "Price"
+    END
+
+    # get item price
+    ${t_locator} =    Set Variable   //tr[contains(string(), "${p_itemName}")]/td[${index}]
+    ${t_price} =    Get Text    ${t_locator}
+    ${t_price} =	Fetch From Right	${t_price}    $	
+    [return]  ${t_price}
+
+Get Total Price
+    ${t_locator} =    Set Variable   //tr[contains(string(), "Total:")]/td[1]
+    ${t_price} =    Get Text    ${t_locator}
+    ${t_price} =	Fetch From Right	${t_price}    Total: 
+    [return]  ${t_price}
